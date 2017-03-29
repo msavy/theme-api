@@ -124,7 +124,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
 
     // Initialization
     gitbook.events.bind('start', function(e, config) {
-        var opts = config['theme-api'];
+        var opts = config['theme-apiman'];
 
         // Create layout button in toolbar
         gitbook.toolbar.createButton({

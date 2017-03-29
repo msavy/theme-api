@@ -21,7 +21,7 @@ function generateMethod(book, body, examples) {
     // Render method body
     return Q()
     .then(function() {
-        return book.renderBlock('markdown', body);
+        return book.renderBlock('asciidoc', body);
     })
     .then(function(apiDefinition) {
         $apiDefinition.html(apiDefinition);
@@ -41,7 +41,7 @@ function generateMethod(book, body, examples) {
                 $example = $('<div class="api-method-sample" data-lang="'+example.lang+'" data-name="'+example.name+'"></div>');
             }
 
-            return book.renderBlock('markdown', example.body)
+            return book.renderBlock('asciidoc', example.body)
             .then(function(body) {
                 $example.html(body);
                 $apiCode.append($example);
@@ -58,10 +58,10 @@ module.exports = {
     book: {
         assets: './assets',
         js: [
-            'theme-api.js'
+            'theme-apiman.js'
         ],
         css: [
-            'theme-api.css'
+            'theme-apiman.css'
         ]
     },
 
@@ -110,7 +110,7 @@ module.exports = {
     hooks: {
         config: function(config) {
             // Merge user configured languages with default languages
-            configLanguages = _.unionBy(config.pluginsConfig['theme-api'].languages, DEFAULT_LANGUAGES, 'lang');
+            configLanguages = _.unionBy(config.pluginsConfig['theme-apiman'].languages, DEFAULT_LANGUAGES, 'lang');
             return config;
         }
     }

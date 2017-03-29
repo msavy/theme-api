@@ -4,7 +4,7 @@ Theme for using GitBook to publish an API documentation.
 
 This theme works perfectly with search plugins (like [the default plugin](https://github.com/GitbookIO/plugin-search) or [algolia](https://github.com/GitbookIO/plugin-algolia)).
 
-![Screenshot](img/theme-api.png)
+![Screenshot](img/theme-apiman.png)
 
 It also integrates well with the default fontsettings plugin to use the Dark theme.
 
@@ -18,7 +18,7 @@ Add the theme to your book's configuration (book.json):
 
 ```json
 {
-    "plugins": ["theme-api"]
+    "plugins": ["theme-apiman"]
 }
 ```
 
@@ -26,9 +26,9 @@ To use the Dark theme by default:
 
 ```json
 {
-    "plugins": ["theme-api"],
+    "plugins": ["theme-apiman"],
     "pluginsConfig": {
-        "theme-api": {
+        "theme-apiman": {
             "theme": "dark"
         }
     }
@@ -74,9 +74,9 @@ The name of each language can be configured in your `book.json` file, with it's 
 
 ```json
 {
-  "plugins": ["theme-api"],
+  "plugins": ["theme-apiman"],
   "pluginsConfig": {
-    "theme-api": {
+    "theme-apiman": {
       "languages": [
         {
           "lang": "js",          // sample lang argument
@@ -134,9 +134,9 @@ The default aspect can also be set in the theme configuration in the `book.json`
 
 ```json
 {
-  "plugins": ["theme-api"],
+  "plugins": ["theme-apiman"],
   "pluginsConfig": {
-    "theme-api": {
+    "theme-apiman": {
       "split": true
     }
   }
