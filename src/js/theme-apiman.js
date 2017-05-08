@@ -20,7 +20,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
     // Instantiate localStorage
     function init(config) {
         themeApi = gitbook.storage.get('themeApi', {
-            split:       config.split,
+            split:       false,
             currentLang: null
         });
     }
